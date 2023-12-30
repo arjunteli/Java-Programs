@@ -1,14 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="java.util.Scanner"/>
-    <fullyQualifiedTypeName name="java.io.FileNotFoundException"/>
-    <fullyQualifiedTypeName name="java.sql.SQLClientInfoException"/>
-    <fullyQualifiedTypeName name="java.sql.SQLException"/>
-    <fullyQualifiedTypeName name="java.io.IOException"/>
-    <fullyQualifiedTypeName name="com.kn.multithreading2.MyThread"/>
-    <fullyQualifiedTypeName name="com.kn.multithreading3.PrintNum"/>
-    <fullyQualifiedTypeName name="com.kn.multithreading3.PrintChar"/>
-    <fullyQualifiedTypeName name="com.kn.multithreading4.PrintCharacter"/>
     <fullyQualifiedTypeName name="com.kn.multithreading4.PrintNumber"/>
     <fullyQualifiedTypeName name="com.kn.multithreading5.TypingCode"/>
     <fullyQualifiedTypeName name="com.kn.multithreading5.CompilingCode"/>
@@ -23,16 +14,13 @@
     <fullyQualifiedTypeName name="com.kn.multithreading7.Tom"/>
     <fullyQualifiedTypeName name="com.kn.multithreading7.Jerry"/>
     <fullyQualifiedTypeName name="java.lang.Thread"/>
-    <fullyQualifiedTypeName name="java.lang.InternalError"/>
     <fullyQualifiedTypeName name="java.util.TreeSet"/>
     <fullyQualifiedTypeName name="com.kn.wrapperclass.TraversingDemo"/>
     <fullyQualifiedTypeName name="javax.swing.text.html.HTMLDocument.Iterator"/>
-    <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="java.util.ArrayDeque"/>
     <fullyQualifiedTypeName name="java.util.concurrent.PriorityBlockingQueue"/>
     <fullyQualifiedTypeName name="java.util.PriorityQueue"/>
     <fullyQualifiedTypeName name="com.kn.sortingcollection.Student"/>
-    <fullyQualifiedTypeName name="java.lang.Comparable"/>
     <fullyQualifiedTypeName name="com.kn.sortingcomplexcollection.StudentDemo"/>
     <fullyQualifiedTypeName name="com.kn.sortingcomplexcollection.comparator.SortStudentById"/>
     <fullyQualifiedTypeName name="java.util.HashSet"/>
@@ -40,11 +28,8 @@
     <fullyQualifiedTypeName name="java.util.LinkedHashSet"/>
     <fullyQualifiedTypeName name="com.kn.sortingcollection.Employee"/>
     <fullyQualifiedTypeName name="java.util.Comparator"/>
-    <fullyQualifiedTypeName name="java.util.TreeMap"/>
-    <fullyQualifiedTypeName name="java.util.HashMap"/>
     <fullyQualifiedTypeName name="com.kn.treemap.Student"/>
     <fullyQualifiedTypeName name="com.kn.linkedhashmap.LinkedHashMapDemo"/>
-    <fullyQualifiedTypeName name="java.util.LinkedHashMap"/>
     <fullyQualifiedTypeName name="java.util.concurrent.CopyOnWriteArraySet"/>
     <fullyQualifiedTypeName name="java.util.Iterator"/>
     <fullyQualifiedTypeName name="java.sql.DriverManager"/>
@@ -54,10 +39,25 @@
     <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
     <fullyQualifiedTypeName name="java.sql.ResultSet"/>
     <fullyQualifiedTypeName name="java.util.Collection"/>
-    <fullyQualifiedTypeName name="java.util.Collections"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="java.sql.Statement"/>
     <fullyQualifiedTypeName name="com.kn.BinaryTreeDemo.BuildTree"/>
     <fullyQualifiedTypeName name="java.util.Queue"/>
     <fullyQualifiedTypeName name="java.util.LinkedList"/>
+    <fullyQualifiedTypeName name="java.lang.reflect.Array"/>
+    <fullyQualifiedTypeName name="java.lang.InternalError"/>
+    <fullyQualifiedTypeName name="java.util.Map"/>
+    <fullyQualifiedTypeName name="java.util.LinkedHashMap"/>
+    <fullyQualifiedTypeName name="java.util.HashMap"/>
+    <fullyQualifiedTypeName name="java.util.Map.Entry"/>
+    <fullyQualifiedTypeName name="kn.interview.Demo2"/>
+    <fullyQualifiedTypeName name="java.lang.Comparable"/>
+    <fullyQualifiedTypeName name="java.util.Collections"/>
+    <fullyQualifiedTypeName name="kn.interview.ObjectClass"/>
+    <fullyQualifiedTypeName name="java.util.TreeMap"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="com.kn.BinaryTreeDemo.Info"/>
+    <fullyQualifiedTypeName name="java.lang.Math"/>
+    <fullyQualifiedTypeName name="com.kn.BinaryTreeDemo.Node"/>
 </qualifiedTypeNameHistroy>

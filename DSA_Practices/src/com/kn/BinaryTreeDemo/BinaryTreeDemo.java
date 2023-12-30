@@ -25,7 +25,25 @@ public class BinaryTreeDemo {
 		tree.levelOrder(root);
 		System.out.println("*********************************");
 		System.out.println("Height of the Tree = " + tree.height(root));
-		System.out.println("Total Count of Nodes = "+ tree.countNodes(root));
-		System.out.println("Sum of data of Nodes = "+ tree.sumOfNodes(root));
+		System.out.println("Total Count of Nodes = " + tree.countNodes(root));
+		System.out.println("Sum of data of Nodes = " + tree.sumOfNodes(root));
+
+		System.out.println("*********************************");
+		System.out.println(tree.diameter(root));
+		System.out.println("Diameter of Tree = " + tree.diameter2(root).daimeter);
+		
+		System.out.println("*********************************");
+		Node root1 = new Node(1);
+		root1.left = new Node(2);
+		root1.right = new Node(3);
+		root1.left.left = new Node(4);
+		root1.left.right = new Node(5);
+		root1.right.right = new Node(6);
+		
+		Node subRoot = new Node(2);
+		subRoot.left = new Node(4);
+		subRoot.right= new Node(5);
+		System.out.println(tree.isSubTree(root1, subRoot));
+
 	}
 }

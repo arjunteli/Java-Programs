@@ -111,4 +111,65 @@ public class BuildTree {
 		int rootDiameter = rightheight + leftheight + 1;
 		return Math.max(Math.max(rightDiameter, rootDiameter), rootDiameter);
 	}
+
+	public Info diameter2(Node root) {
+		if (root == null) {
+			return new Info(0, 0);
+		}
+		Info rightInfo = diameter2(root.right);
+		Info leftInfo = diameter2(root.left);
+		int leftHeight = leftInfo.height;
+		int rightHeight = rightInfo.height;
+		int leftDiameter = leftInfo.daimeter;
+		int rightDiameter = rightInfo.daimeter;
+		int rootDiameter = rightHeight + leftHeight + 1;
+		return new Info(Math.max(Math.max(rightDiameter, leftDiameter), rootDiameter),
+				Math.max(rightHeight, leftHeight) + 1);
+
+//		int diameter = Math.max(Math.max(rightInfo.daimeter, leftInfo.daimeter),
+//				rightInfo.height + leftInfo.height + 1);
+//		int height = Math.max(rightInfo.height, leftInfo.height) + 1;
+//		return new Info(diameter, height);
+	}
+
+	public boolean isSubTree(Node root, Node subroot) {
+		if (root == null) {
+			return false;
+		}
+		if (root.data == subroot.data) {
+			if (isIdentical(root, subroot)) {
+				return true;
+			}
+		}
+
+		return isSubTree(root.left, subroot) || isSubTree(root.right, subroot);
+	}
+
+	public boolean isIdentical(Node node, Node subroot) {
+		if (node == null && subroot == null) {
+			return true;
+		} else if (node == null || subroot == null || node.data != subroot.data) {
+			return false;
+		}
+
+		if (!isIdentical(node.left, subroot.left)) {
+			return false;
+		}
+		if (!isIdentical(node.right, subroot.right)) {
+			return false;
+		}
+		return true;
+	}
+}
+
+class Info {
+	int daimeter;
+	int height;
+
+	public Info(int daimeter, int height) {
+		super();
+		this.daimeter = daimeter;
+		this.height = height;
+	}
+
 }
