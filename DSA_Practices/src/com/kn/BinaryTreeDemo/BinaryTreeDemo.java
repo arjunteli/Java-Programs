@@ -47,6 +47,8 @@ public class BinaryTreeDemo {
 		System.out.print("IS SUBTREE : ");
 		System.out.println(tree.isSubTree(root1, subRoot));
 		System.out.println("*********************************");
-		tree.topView(root1);
+		tree.topView(root);
+		System.out.println("*********************************");
+		tree.KthLevel(root1,1,3);
 	}
 }

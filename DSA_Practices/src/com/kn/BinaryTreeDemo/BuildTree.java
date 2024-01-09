@@ -191,7 +191,6 @@ public class BuildTree {
 					q.add(new Info2(curr.node.left, curr.hd - 1));
 					min = Math.min(min, curr.hd - 1);
 				}
-
 				if (curr.node.right != null) {
 					q.add(new Info2(curr.node.right, curr.hd + 1));
 					max = Math.max(max, curr.hd + 1);
@@ -203,6 +202,22 @@ public class BuildTree {
 			System.out.print(map.get(i).data + " ");
 		}
 		System.out.println();
+	}
+
+	public void KthLevel(Node root, int level, int k) {
+		// base case
+		if (root == null) {
+			return;
+		}
+
+		// kaam
+		if (level == k) {
+			System.out.print(root.data + " ");
+			return;
+		} else {
+			KthLevel(root.left, level + 1, k);
+			KthLevel(root.right, level + 1, k);
+		}
 	}
 
 }
