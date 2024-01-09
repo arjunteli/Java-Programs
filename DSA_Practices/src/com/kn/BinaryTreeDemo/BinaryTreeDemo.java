@@ -49,6 +49,15 @@ public class BinaryTreeDemo {
 		System.out.println("*********************************");
 		tree.topView(root);
 		System.out.println("*********************************");
-		tree.KthLevel(root1,1,3);
+		tree.KthLevel(root1,1,2);
+		System.out.println();
+		System.out.println("*********************************");
+		Node lca = tree.lca(root, 4, 5);
+		if(lca!=null) {
+			System.out.println(lca.data);
+		}
+		System.out.println("*********************************");
+		System.out.println(tree.lca2(root, 4, 6).data);
+		
 	}
 }

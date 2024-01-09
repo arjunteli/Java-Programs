@@ -1,5 +1,6 @@
 package com.kn.BinaryTreeDemo;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Queue;
@@ -218,6 +219,64 @@ public class BuildTree {
 			KthLevel(root.left, level + 1, k);
 			KthLevel(root.right, level + 1, k);
 		}
+	}
+
+	private boolean getPath(Node node, int n, ArrayList<Node> path) {
+		if (node == null) {
+			return false;
+		}
+
+		path.add(node);
+
+		if (node.data == n) {
+			return true;
+		}
+
+		boolean foundLeft = getPath(node.left, n, path);
+		boolean foundRight = getPath(node.right, n, path);
+
+		if (foundRight || foundLeft) {
+			return true;
+		} else {
+			path.remove(path.size() - 1);
+			return false;
+		}
+	}
+
+	public Node lca(Node root, int n1, int n2) {
+		ArrayList<Node> path1 = new ArrayList<>();
+		ArrayList<Node> path2 = new ArrayList<>();
+
+		getPath(root, n1, path1);
+		getPath(root, n2, path2);
+		if (path1.size() == 0 || path2.size() == 0) {
+			return null;
+		}
+		int i = 0;
+		for (; i < path1.size() && i < path2.size(); i++) {
+			if (path1.get(i) != path2.get(i)) {
+				i--;
+				break;
+			}
+		}
+		return path1.get(i);
+	}
+
+	public Node lca2(Node root, int n1, int n2) {
+		if (root == null || root.data == n1 || root.data == n2)
+			return root;
+
+		Node rightLca = lca2(root.right, n1, n2);
+		Node leftLca = lca2(root.left, n1, n2);
+
+		if (leftLca == null) {
+			return rightLca;
+		}
+		if (rightLca == null) {
+			return leftLca;
+		}
+
+		return root;// Case when right and left subtrees contains n1 and n2
 	}
 
 }
