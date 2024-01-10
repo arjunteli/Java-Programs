@@ -331,6 +331,23 @@ public class BuildTree {
 
 	}
 
+	public int transform(Node root) {
+		if (root == null) {
+			return 0;
+		}
+		int leftChild = transform(root.left);// old left data value
+		int rightChild = transform(root.right);// old right data value
+
+		int data = root.data;
+
+		int newLeft = root.left == null ? 0 : root.left.data;
+		int newRight = root.right == null ? 0 : root.right.data;
+
+		root.data = newLeft + leftChild + newRight + rightChild;
+		return data;
+
+	}
+
 }
 
 class Info2 {
