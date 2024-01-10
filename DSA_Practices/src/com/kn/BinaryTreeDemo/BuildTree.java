@@ -308,6 +308,29 @@ public class BuildTree {
 		}
 	}
 
+	public int KAncestor(Node root, int n, int k) {
+		if (root == null) {
+			return -1;
+		}
+		// kaam
+		if (root.data == n) {
+			return 0;
+		}
+
+		int leftDis = KAncestor(root.left, n, k);
+		int rightDis = KAncestor(root.right, n, k);
+
+		if (leftDis == -1 && rightDis == -1) {
+			return -1;
+		}
+		int max = Math.max(leftDis, rightDis);// valid Distance
+		if (max + 1 == k) {
+			System.out.println(root.data);
+		}
+		return max + 1;
+
+	}
+
 }
 
 class Info2 {
