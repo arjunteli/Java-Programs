@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class BuildTree {
+public class BinaryTreeFunctions {
 	static int idx = -1;
 
 	public Node buildTree(int[] nodes) {// PreOrder Tree
