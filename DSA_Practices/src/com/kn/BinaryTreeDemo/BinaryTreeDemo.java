@@ -58,6 +58,7 @@ public class BinaryTreeDemo {
 		}
 		System.out.println("*********************************");
 		System.out.println(tree.lca2(root, 4, 6).data);
-		
+		System.out.println("*********************************");
+		System.out.println("Minimum Distance between Both Nodes"+tree.minDistance(root, 4, 6));
 	}
 }

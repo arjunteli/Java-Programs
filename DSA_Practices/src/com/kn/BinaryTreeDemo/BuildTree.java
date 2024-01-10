@@ -279,6 +279,35 @@ public class BuildTree {
 		return root;// Case when right and left subtrees contains n1 and n2
 	}
 
+	public int minDistance(Node root, int n1, int n2) {
+		Node lca = lca2(root, n1, n2);
+		int dist1 = lcaDist(lca, n1);
+		int dist2 = lcaDist(lca, n2);
+		return dist1 + dist2;
+
+	}
+
+	public int lcaDist(Node node, int n) {
+		if (node == null)
+			return -1;
+
+		// kaam
+		if (node.data == n) {
+			return 0;
+		}
+
+		int left = lcaDist(node.left, n);
+		int right = lcaDist(node.right, n);
+
+		if (left == -1 && right == -1) {
+			return -1;
+		} else if (left == -1) {
+			return right + 1;
+		} else {
+			return left + 1;
+		}
+	}
+
 }
 
 class Info2 {
